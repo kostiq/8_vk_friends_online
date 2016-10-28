@@ -28,6 +28,7 @@ def output_friends_to_console(friends_online):
     for friend in friends_online:
         print(friend['first_name'], friend['last_name'])
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--login', help="Your login", required=True)
