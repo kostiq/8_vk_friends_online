@@ -4,14 +4,6 @@ import argparse
 APP_ID = 5669032
 
 
-def get_user_login():
-    pass
-
-
-def get_user_password():
-    pass
-
-
 def get_online_friends(login, password):
     session = vk.AuthSession(
         app_id=APP_ID,
@@ -37,7 +29,5 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    login = args.login
-    password = args.password
-    friends_online = get_online_friends(login, password)
+    friends_online = get_online_friends(args.login, args.password)
     output_friends_to_console(friends_online)
